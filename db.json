@@ -1,14 +1,68 @@
 {
-  "users": [
-    { "id": 1, "firstName": "Magnus", "age": 37, "companyId": "1" },
-    { "id": 2, "firstName": "Dan", "age": 24, "companyId": "3" },
-    { "id": 3, "firstName": "Jonas", "age": 21, "companyId": "1" },
-    { "id": 4, "firstName": "Shila", "age": 35, "companyId": "2" }
-  ],
-
   "companies": [
-    { "id": 1, "name": "SAITS", "description": "Bestest company EU" },
-    { "id": 2, "name": "Apple", "description": "Nice computers" },
-    { "id": 3, "name": "Google", "description": "Good phones" }
+    {
+      "id": 1,
+      "name": "ICA Gnista"
+    },
+    {
+      "id": 2,
+      "name": "Phils Burger"
+    },
+    {
+      "id": 3,
+      "name": "Testaffären"
+    }
+  ],
+  "coupons": [
+    {
+      "id": 1,
+      "companyID": 1,
+      "offer": "100kr rabatt"
+    },
+    {
+      "id": 2,
+      "companyID": 1,
+      "offer": "500kr rabatt"
+    },
+    {
+      "id": 3,
+      "companyID": 2,
+      "offer": "Gratis hamburgare på onsdag"
+    },
+    {
+      "id": 4,
+      "companyId": 2,
+      "offer": "Extra strips till haloumisalladen"
+    },
+    {
+      "id": 5,
+      "companyId": 2,
+      "offer": "Extra cola zero till Rasmus på onsdagar."
+    },
+    {
+      "id": 6,
+      "companyId": 1,
+      "offer": "Fri burktomar vid köp om 500kr"
+    },
+    {
+      "id": 7,
+      "companyId": 3,
+      "offer": "Valfri godisbit vid in och utgång ur affären."
+    },
+    {
+      "id": 8,
+      "companyId": 3,
+      "offer": "Extra mycket smabal oelek till Kalle på fredag."
+    },
+    {
+      "id": 9,
+      "companyId": 1,
+      "offer": "Fria kassar den andra lördagen i November"
+    },
+    {
+      "id": 10,
+      "companyId": 1,
+      "offer": "Fri kanelbulle på kanelbullens dag"
+    }
   ]
 }

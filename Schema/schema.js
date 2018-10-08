@@ -15,23 +15,22 @@ const CompanyType = new GraphQLObjectType({
     id: { type: GraphQLInt },
     name: { type: GraphQLString },
     description: { type: GraphQLString },
-    users: {
-      type: new GraphQLList(UserType),
+    coupons: {
+      type: new GraphQLList(CouponType),
       resolve(parent, args) {
         return axios
-          .get(`http://localhost:3000/companies/${parent.id}/users`)
+          .get(`http://localhost:3000/companies/${parent.id}/coupons`)
           .then(resp => resp.data)
       },
     },
   }),
 })
 
-const UserType = new GraphQLObjectType({
-  name: "User",
+const CouponType = new GraphQLObjectType({
+  name: "Coupon",
   fields: () => ({
     id: { type: GraphQLInt },
-    firstName: { type: GraphQLString },
-    age: { type: GraphQLInt },
+    offer: { type: GraphQLString },
     company: {
       type: CompanyType,
       resolve(parent, args) {
@@ -46,12 +45,12 @@ const UserType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
   fields: {
-    user: {
-      type: UserType,
+    coupon: {
+      type: CouponType,
       args: { id: { type: GraphQLInt } },
       resolve(parent, args) {
         return axios
-          .get(`http://localhost:3000/users/${args.id}`)
+          .get(`http://localhost:3000/coupons/${args.id}`)
           .then(resp => resp.data)
       },
     },
